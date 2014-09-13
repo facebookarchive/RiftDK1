@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G - 1.7.5" name="Tracker">
+  <Target name="Tracker" isCurrent="1">
+    <Device manufacturerId="9" manufacturerName="ST" chipId="305" chipName="STM32F103C8" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="4"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value="-std=c99"/>
+        <Includepaths>
+          <Includepath path="."/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="STM32F103C8"/>
+          <Define name="STM32F10X_MD"/>
+          <Define name="USE_STDPERIPH_DRIVER"/>
+          <Define name="__ASSEMBLY__"/>
+          <Define name="USE_TRACKER_V1"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="1"/>
+        <Option name="LTO" value="1"/>
+        <Option name="IsNewStartupCode" value="1"/>
+        <Option name="Library" value="Not use C Library"/>
+        <Option name="UserEditLinker" value="--entry=main; "/>
+        <LinkedLibraries>
+          <Libset dir="" libs="m"/>
+        </LinkedLibraries>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x0000F800" startValue="0x08000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00005000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
+        </MemoryAreas>
+        <LocateLinkFile path="../../../../../coocox/coide/configuration/programdata/tracker/arm-gcc-link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="Tracker"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="ST-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="STM32F10x_MD_64.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./">
+    <Component id="30" name="C Library" path="" type="2"/>
+    <Component id="50" name="CMSIS core" path="" type="2"/>
+    <Component id="439" name="CMSIS_Boot" path="" type="2"/>
+    <Component id="440" name="RCC" path="" type="2"/>
+    <Component id="442" name="PWR" path="" type="2"/>
+    <Component id="444" name="GPIO" path="" type="2"/>
+    <Component id="445" name="EXTI" path="" type="2"/>
+    <Component id="452" name="SPI" path="" type="2"/>
+    <Component id="454" name="DBGMCU" path="" type="2"/>
+    <Component id="455" name="FLASH" path="" type="2"/>
+    <Component id="456" name="TIM" path="" type="2"/>
+    <Component id="458" name="USART" path="" type="2"/>
+    <Component id="467" name="MISC" path="" type="2"/>
+  </Components>
+  <Files>
+    <File name="stm_usb/inc/usb_int.h" path="stm_usb/inc/usb_int.h" type="1"/>
+    <File name="oculus/src/display_info.c" path="oculus/src/display_info.c" type="1"/>
+    <File name="stm_usb/inc/usb_sil.h" path="stm_usb/inc/usb_sil.h" type="1"/>
+    <File name="stm_usb/inc/usb_init.h" path="stm_usb/inc/usb_init.h" type="1"/>
+    <File name="oculus/inc" path="" type="2"/>
+    <File name="stm_lib/src/stm32f10x_dbgmcu.c" path="stm_lib/src/stm32f10x_dbgmcu.c" type="1"/>
+    <File name="oculus/src" path="" type="2"/>
+    <File name="usb/inc/usb_conf.h" path="usb/inc/usb_conf.h" type="1"/>
+    <File name="oculus/src/data_packet.c" path="oculus/src/data_packet.c" type="1"/>
+    <File name="oculus/src/gpio.c" path="oculus/src/gpio.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_pwr.h" path="stm_lib/inc/stm32f10x_pwr.h" type="1"/>
+    <File name="usb/inc/usb_desc.h" path="usb/inc/usb_desc.h" type="1"/>
+    <File name="oculus/inc/gpio.h" path="oculus/inc/gpio.h" type="1"/>
+    <File name="stm_usb/src/usb_mem.c" path="stm_usb/src/usb_mem.c" type="1"/>
+    <File name="oculus/inc/invensense_register_map.h" path="oculus/inc/invensense_register_map.h" type="1"/>
+    <File name="stm_lib/src/misc.c" path="stm_lib/src/misc.c" type="1"/>
+    <File name="oculus/inc/feature_config.h" path="oculus/inc/feature_config.h" type="1"/>
+    <File name="cmsis_boot/stm32f10x.h" path="cmsis_boot/stm32f10x.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_dbgmcu.h" path="stm_lib/inc/stm32f10x_dbgmcu.h" type="1"/>
+    <File name="cmsis_boot/stm32f10x_conf.h" path="cmsis_boot/stm32f10x_conf.h" type="1"/>
+    <File name="usb/src/usb_prop.c" path="usb/src/usb_prop.c" type="1"/>
+    <File name="oculus/inc/invensense.h" path="oculus/inc/invensense.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_flash.h" path="stm_lib/inc/stm32f10x_flash.h" type="1"/>
+    <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
+    <File name="oculus/inc/display_info.h" path="oculus/inc/display_info.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_spi.h" path="stm_lib/inc/stm32f10x_spi.h" type="1"/>
+    <File name="oculus/inc/calibrate.h" path="oculus/inc/calibrate.h" type="1"/>
+    <File name="stm_usb/inc/otgd_fs_int.h" path="stm_usb/inc/otgd_fs_int.h" type="1"/>
+    <File name="stm_usb/src/otgd_fs_int.c" path="stm_usb/src/otgd_fs_int.c" type="1"/>
+    <File name="stm_usb/inc/otgd_fs_pcd.h" path="stm_usb/inc/otgd_fs_pcd.h" type="1"/>
+    <File name="usb/inc/usb_istr.h" path="usb/inc/usb_istr.h" type="1"/>
+    <File name="platform_config.h" path="platform_config.h" type="1"/>
+    <File name="cmsis_boot/startup/startup_stm32f10x_md.c" path="cmsis_boot/startup/startup_stm32f10x_md.c" type="1"/>
+    <File name="stm_lib/src/stm32f10x_gpio.c" path="stm_lib/src/stm32f10x_gpio.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_usart.h" path="stm_lib/inc/stm32f10x_usart.h" type="1"/>
+    <File name="cmsis_boot/system_stm32f10x.c" path="cmsis_boot/system_stm32f10x.c" type="1"/>
+    <File name="usb/src/usb_pwr.c" path="usb/src/usb_pwr.c" type="1"/>
+    <File name="stm_usb/src/usb_regs.c" path="stm_usb/src/usb_regs.c" type="1"/>
+    <File name="stm_usb/inc/otgd_fs_cal.h" path="stm_usb/inc/otgd_fs_cal.h" type="1"/>
+    <File name="stm_lib/inc/misc.h" path="stm_lib/inc/misc.h" type="1"/>
+    <File name="stm_usb/inc/otgd_fs_regs.h" path="stm_usb/inc/otgd_fs_regs.h" type="1"/>
+    <File name="stm_eeprom/src" path="" type="2"/>
+    <File name="oculus" path="" type="2"/>
+    <File name="oculus/inc/spi.h" path="oculus/inc/spi.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_rcc.c" path="stm_lib/src/stm32f10x_rcc.c" type="1"/>
+    <File name="oculus/src/delay.c" path="oculus/src/delay.c" type="1"/>
+    <File name="oculus/inc/factory.h" path="oculus/inc/factory.h" type="1"/>
+    <File name="stm_usb/inc/usb_mem.h" path="stm_usb/inc/usb_mem.h" type="1"/>
+    <File name="stm_lib/src" path="" type="2"/>
+    <File name="cmsis" path="" type="2"/>
+    <File name="stm_lib" path="" type="2"/>
+    <File name="stm_usb/src" path="" type="2"/>
+    <File name="oculus/inc/raw_packet.h" path="oculus/inc/raw_packet.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_exti.h" path="stm_lib/inc/stm32f10x_exti.h" type="1"/>
+    <File name="hw_config.c" path="hw_config.c" type="1"/>
+    <File name="oculus/inc/averaging.h" path="oculus/inc/averaging.h" type="1"/>
+    <File name="cmsis_boot/system_stm32f10x.h" path="cmsis_boot/system_stm32f10x.h" type="1"/>
+    <File name="stm_usb/src/otgd_fs_pcd.c" path="stm_usb/src/otgd_fs_pcd.c" type="1"/>
+    <File name="stm_usb/src/otgd_fs_cal.c" path="stm_usb/src/otgd_fs_cal.c" type="1"/>
+    <File name="oculus/inc/hmc5983_register_map.h" path="oculus/inc/hmc5983_register_map.h" type="1"/>
+    <File name="stm_usb/inc/usb_type.h" path="stm_usb/inc/usb_type.h" type="1"/>
+    <File name="oculus/inc/platform_common.h" path="oculus/inc/platform_common.h" type="1"/>
+    <File name="oculus/src/feature_config.c" path="oculus/src/feature_config.c" type="1"/>
+    <File name="stm_usb/src/otgd_fs_dev.c" path="stm_usb/src/otgd_fs_dev.c" type="1"/>
+    <File name="oculus/src/hmc5983.c" path="oculus/src/hmc5983.c" type="1"/>
+    <File name="oculus/inc/hmc5983.h" path="oculus/inc/hmc5983.h" type="1"/>
+    <File name="main.c" path="main.c" type="1"/>
+    <File name="usb/inc/usb_prop.h" path="usb/inc/usb_prop.h" type="1"/>
+    <File name="oculus/inc/autocalibrate.h" path="oculus/inc/autocalibrate.h" type="1"/>
+    <File name="stm_usb/inc/usb_core.h" path="stm_usb/inc/usb_core.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_tim.h" path="stm_lib/inc/stm32f10x_tim.h" type="1"/>
+    <File name="cmsis_boot" path="" type="2"/>
+    <File name="oculus/src/autocalibrate.c" path="oculus/src/autocalibrate.c" type="1"/>
+    <File name="hw_config.h" path="hw_config.h" type="1"/>
+    <File name="oculus/inc/delay.h" path="oculus/inc/delay.h" type="1"/>
+    <File name="stm32_it.h" path="stm32_it.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_tim.c" path="stm_lib/src/stm32f10x_tim.c" type="1"/>
+    <File name="cmsis_boot/startup" path="" type="2"/>
+    <File name="oculus/src/averaging.c" path="oculus/src/averaging.c" type="1"/>
+    <File name="oculus/inc/user_calibrate.h" path="oculus/inc/user_calibrate.h" type="1"/>
+    <File name="usb/src" path="" type="2"/>
+    <File name="stm_lib/src/stm32f10x_spi.c" path="stm_lib/src/stm32f10x_spi.c" type="1"/>
+    <File name="oculus/src/user_calibrate.c" path="oculus/src/user_calibrate.c" type="1"/>
+    <File name="usb/inc" path="" type="2"/>
+    <File name="usb/src/usb_endp.c" path="usb/src/usb_endp.c" type="1"/>
+    <File name="stm_usb/inc/usb_regs.h" path="stm_usb/inc/usb_regs.h" type="1"/>
+    <File name="stm_usb/src/usb_sil.c" path="stm_usb/src/usb_sil.c" type="1"/>
+    <File name="cmsis/core_cm3.c" path="cmsis/core_cm3.c" type="1"/>
+    <File name="usb" path="" type="2"/>
+    <File name="stm32_it.c" path="stm32_it.c" type="1"/>
+    <File name="stm_eeprom/inc/eeprom.h" path="stm_eeprom/inc/eeprom.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_usart.c" path="stm_lib/src/stm32f10x_usart.c" type="1"/>
+    <File name="oculus/inc/data_packet.h" path="oculus/inc/data_packet.h" type="1"/>
+    <File name="stm_usb/inc/otgd_fs_dev.h" path="stm_usb/inc/otgd_fs_dev.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_pwr.c" path="stm_lib/src/stm32f10x_pwr.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_gpio.h" path="stm_lib/inc/stm32f10x_gpio.h" type="1"/>
+    <File name="oculus/src/uart.c" path="oculus/src/uart.c" type="1"/>
+    <File name="oculus/inc/eeprom_table.h" path="oculus/inc/eeprom_table.h" type="1"/>
+    <File name="usb/src/usb_istr.c" path="usb/src/usb_istr.c" type="1"/>
+    <File name="usb/src/usb_desc.c" path="usb/src/usb_desc.c" type="1"/>
+    <File name="oculus/src/factory.c" path="oculus/src/factory.c" type="1"/>
+    <File name="oculus/src/spi.c" path="oculus/src/spi.c" type="1"/>
+    <File name="stm_usb" path="" type="2"/>
+    <File name="cmsis/core_cm3.h" path="cmsis/core_cm3.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_exti.c" path="stm_lib/src/stm32f10x_exti.c" type="1"/>
+    <File name="oculus/src/calibrate.c" path="oculus/src/calibrate.c" type="1"/>
+    <File name="stm_usb/src/usb_core.c" path="stm_usb/src/usb_core.c" type="1"/>
+    <File name="stm_usb/src/usb_init.c" path="stm_usb/src/usb_init.c" type="1"/>
+    <File name="stm_usb/inc/usb_def.h" path="stm_usb/inc/usb_def.h" type="1"/>
+    <File name="oculus/inc/uart.h" path="oculus/inc/uart.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_flash.c" path="stm_lib/src/stm32f10x_flash.c" type="1"/>
+    <File name="oculus/src/temperature.c" path="oculus/src/temperature.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_rcc.h" path="stm_lib/inc/stm32f10x_rcc.h" type="1"/>
+    <File name="stm_eeprom/inc" path="" type="2"/>
+    <File name="syscalls" path="" type="2"/>
+    <File name="stm_usb/inc/usb_lib.h" path="stm_usb/inc/usb_lib.h" type="1"/>
+    <File name="stm_usb/src/usb_int.c" path="stm_usb/src/usb_int.c" type="1"/>
+    <File name="oculus/inc/temperature.h" path="oculus/inc/temperature.h" type="1"/>
+    <File name="stm_lib/inc" path="" type="2"/>
+    <File name="stm_eeprom/src/eeprom.c" path="stm_eeprom/src/eeprom.c" type="1"/>
+    <File name="oculus/src/invensense.c" path="oculus/src/invensense.c" type="1"/>
+    <File name="stm_usb/inc" path="" type="2"/>
+    <File name="usb/inc/usb_pwr.h" path="usb/inc/usb_pwr.h" type="1"/>
+    <File name="stm_eeprom" path="" type="2"/>
+  </Files>
+</Project>

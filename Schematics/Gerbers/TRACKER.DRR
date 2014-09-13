@@ -1,0 +1,18 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: TRACKER.PcbDoc   1/29/2013  6:49:18 AM
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : TRACKER.TXT
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        8mil (0.2032mm)          Round          73               8.01 Inch (203.51 mm)
+T2        35.4mil (0.89916mm)      Round          8                0.90 Inch (22.86 mm)
+T3        35.4mil (0.89916mm)      Round          2         NPTH   0.15 Inch (3.81 mm)
+T4        43.3mil (1.09982mm)      Round          2         NPTH   0.34 Inch (8.75 mm)
+T5        125mil (3.175mm)         Round          2         NPTH   1.42 Inch (36.19 mm)
+---------------------------------------------------------------------------
+Totals                                            87               10.83 Inch (275.12 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00
